@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<header th:replace="admin/header::header-fragment"></header>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- 引入页面头header-fragment -->
+    <div th:replace="admin/header::header-nav"></div>
+    <!-- 引入工具栏sidebar-fragment -->
+    <div th:replace="admin/sidebar::sidebar-fragment(${path})"></div>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- Main content -->
+        <div class="content">
+            <div class="card card-primary card-outline">
+                <div class="card-header">
+                    <h3 class="card-title">首页</h3>
+                </div> <!-- /.card-body -->
+                <div class="card-body">
+                    <div class="panel panel-default">
+                        <div style="padding: 10px 0 20px 10px;">
+                            <a href="localhost:8080" target="_blank">
+                                <!--<img th:src="##" style="width: 480px;height: 240px;">-->
+                                <p>构建教学资源共享平台的目的是，支持大学本科教学过程中教师和学生之间的信息共享和交流。该平台具有以下主要功能：<br>
+                                    1）在Lucene的支持下，为ppt、word 、excel、pdf、html等格式的电子教学资料构建索引，对全文检索提供支持。<br>
+                                    2）设计存储结构。在文件系统和Lucene的支持下，支持各类文档、索引、及其他相关信息的存储；引入数据库系统，支持结构化数据的存储。<br>
+                                    3）支持学生按照导航、关键词和关键句的方式访问和下载平台上的教学资料。<br>
+                                    4）支持教师上传、更新和维护教学资料。<br>
+                                    5）支持用户角色和权限的管理，支持教学资料权限的设置和管理，支持用户群的设置和管理。<br>
+                                    以此为基础，支持学生在特定的用户群中上传作业和实验报告等电子文档，支持教师在特定的用户群中批阅和下载。</p>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <!-- 引入页脚footer-fragment -->
+    <div th:replace="admin/footer::footer-fragment"></div>
+</div>
+<!-- jQuery -->
+<script th:src="@{/plugins/jquery/jquery.min.js}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script th:src="@{/plugins/jQueryUI/jquery-ui.min.js}"></script>
+<!-- Bootstrap 4 -->
+<script th:src="@{/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<!-- AdminLTE App -->
+<script th:src="@{/dist/js/adminlte.min.js}"></script>
+</body>
+</html>
